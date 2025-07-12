@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="top-left">Employee Directory</div>
+    <div class="top-center">
+      <input type="text" id="searchInput" placeholder="Search by name or email" />
+    </div>
+    <div class="top-right">
+      <button id="filterToggle" class="filter-btn">Filter</button>
+    </div>
+  </div>
+
+  <div class="subbar">
+    <div class="sub-left">
+      Sort:
+      <select id="sortSelect">
+        <option value="">Select ▼</option>
+        <option value="firstName">First Name</option>
+        <option value="department">Department</option>
+      </select>
+      Show:
+      <select id="pageSizeSelect">
+        <option value="10">10 ▼</option>
+        <option value="25">25 ▼</option>
+        <option value="50">50 ▼</option>
+        <option value="100">100 ▼</option>
+      </select>
+    </div>
+    <div class="sub-right">
+      <button id="addEmployeeBtn" class="add-btn">Add Employee</button>
+    </div>
+  </div>
+
+  <div class="filter-panel" id="filterPanel">
+    <input type="text" id="filterName" placeholder="Filter by First Name" />
+    <input type="text" id="filterDept" placeholder="Filter by Department" />
+    <input type="text" id="filterRole" placeholder="Filter by Role" />
+    <button id="applyFilterBtn" class="apply-btn">Apply Filter</button>
+  </div>
+
+  <div class="employee-list" id="employeeList"></div>
+
+  <div class="pagination" id="paginationControls"></div>
+
+  <div id="formModal" class="modal">
+    <div class="modal-content">
+      <h2 id="formTitle">Add Employee</h2>
+      <form id="employeeForm">
+        <input type="hidden" id="employeeId" />
+        <input type="text" id="firstName" placeholder="First Name" required />
+        <input type="text" id="lastName" placeholder="Last Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" id="department" placeholder="Department" required />
+        <input type="text" id="role" placeholder="Role" required />
+        <div class="form-buttons">
+          <button type="submit" class="add-btn">Add</button>
+          <button type="button" id="cancelBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
