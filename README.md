@@ -18,4 +18,4 @@ This project is a fully responsive and interactive **Employee Directory** built 
 
 ---
 
-## 📁 Folder Structure
+## screenshot: ( https://github.com/madhavi516/employee-directory/blob/master/employee-directory-screenshot.pdf )
